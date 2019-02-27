@@ -30,7 +30,7 @@ public class OrderProcessor
             throw new InvalidOperationalException("This order is already Shipped");
         order.shipment = new shipment
         {
-            Cost = _shippingCalculator.Calculateshipping(order),
+            Cost = _shippingCalculator.CalculateShipping(order),
             ShippingDate = DateTime.Today.AddDays(1)
         };
     }
